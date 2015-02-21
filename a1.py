@@ -29,9 +29,9 @@ class TestHelper():
 
 class DataManager():
     # Assignment 1 class
-    def __init__(self):
+    def __init__(self, rangeOfRandInts = 100, square_dim = 5 ):
         self.OneD        = [];
-        self.TwoD        = [[]];
+        self.TwoD        = np.random.random_integers(rangeOfRandInts, size=(square_dim,square_dim));
         self.array1      = [[]];
         self.array2      = [[]];
         self.array3      = [[]];
@@ -46,7 +46,7 @@ class DataManager():
         except:
             print "error in method1LoadAFile(...)"
 
-    def method2CreateTwoD( self, rangeOfRandInts = 100, square_dim = 5 ):
+    def method2CreateNewTwoD( self, rangeOfRandInts = 100, square_dim = 5 ):
         try:
             # Method 2
             self.TwoD = np.random.random_integers(rangeOfRandInts, size=(square_dim,square_dim));
