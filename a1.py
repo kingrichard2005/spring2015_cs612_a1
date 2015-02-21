@@ -96,9 +96,9 @@ class TestUM(unittest.TestCase):
         dataManager = DataManager();
         # Act: Load a bunch of integers  
         dataManager.method1LoadAFileToOneD(self.ts.tempTestFile); 
-        # Assert: 
+        # Assert: a bunch of integers from file are equal to OneD
         expected = self.ts.aBunchOfIntegers;
-        result = dataManager.OneD;
+        result   = dataManager.OneD;
         self.assertEqual( np.array_equal(expected,result), True ) 
 
 if __name__ == "__main__":
